@@ -1,0 +1,99 @@
+body {
+    background: #4E4B52;
+     color: #ffff;
+     font-family: Arial, Helvetica, sans-serif;
+    
+   }
+   
+   .container {
+    padding: 200px;
+   }
+   
+   .faq-meme {
+     margin-bottom: 30px;
+   }
+   
+   .faq-meme__content-wrapper {
+    object-fit: cover;
+     font-size: 1.25em;
+     line-height: 1.4em;
+     max-height: 0px;
+     overflow: hidden;
+     transition: 0.25s ease-in-out;
+   
+   }
+   
+   .faq-meme__title {
+     border-top: #000 1px solid;
+     cursor: pointer;
+     display: block;
+     font-size: 1.25em;
+     font-weight: 700;
+     padding: 30px 0 0 0;
+     position: relative;
+     margin-bottom: 0;
+     transition: all 0.25s ease-out;
+   }
+   
+   .faq-meme__title::after {
+     border-style: solid;
+     border-width: 1px 1px 0 0;
+     content: " ";
+     display: inline-block;
+    float: right;
+     height: 10px;
+     left: 2px;
+     position: relative;
+     right: 20px;
+     top: 2px;
+     transform: translate(-50%, -50%);
+     transition: 0.35s ease-in-out;
+     vertical-align: top;
+     width: 10px;
+   }
+   
+   /* OPTIONAL HOVER STATE */
+   .faq-meme__title:hover { 
+     color: #4E4B52  ;
+   }
+   
+   .faq-meme__trigger:checked
+     + .faq-meme__title
+     + .faq-meme__content-wrapper {
+     max-height: 1050px;
+   
+   }
+   
+   .faq-meme__trigger:checked + .faq-meme__title::after {
+     transform: rotate(-45deg);
+     transition: 0.25s ease-in-out;
+   }
+   
+   input[type="checkbox"] {
+     display: none;
+   }
+   
+   @media only screen and (max-width: 600px) {
+     .container {
+       padding: 80px;
+     }
+
+     .faq-meme__content {
+      width: 480px;
+     }
+   }
+   
+   
+   input[type="checkbox"] {
+     display: none;
+   }
+   
+   @media only screen and (max-width: 600px) {
+     .container {
+       padding: 80px;
+     }
+     .faq-meme__content {
+      width: 480px;
+     }
+   }
+   
